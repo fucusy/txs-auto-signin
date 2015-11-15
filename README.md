@@ -12,7 +12,6 @@ if you do not want install to this path, you need to update the first line to sp
 
 **the phantomjs binary on official website does not work, you can download  phantomjs from [github](https://github.com/eugene1g/phantomjs/releases)**
 
-- linux module libicu, you can install it by `sudo yum install libicu`
 ## usage
 
 if you are already login:
