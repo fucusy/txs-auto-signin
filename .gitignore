@@ -1,0 +1,8 @@
+#ingore auto-generat files
+.idea
+
+#ingore the cookie file
+cookiejar.json
+
+#ingore the node_modules, you can install it by 'npm install'
+node_modules
