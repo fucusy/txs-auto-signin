@@ -6,3 +6,6 @@ cookiejar.json
 
 #ingore the node_modules, you can install it by 'npm install'
 node_modules
+
+#ignore all log
+*.log

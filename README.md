@@ -8,7 +8,6 @@
 
 - [phantomjs](http://phantomjs.org/), you need install the binary file to /usr/local/bin/phantomjs or link to this path,
 if you do not want install to this path, you need to update the first line to specify your binary path in every .js file
-- [nodejs](https://nodejs.org/en/)
 
 **the phantomjs binary on official website does not work, you can download  phantomjs from [github](https://github.com/eugene1g/phantomjs/releases)**
 
