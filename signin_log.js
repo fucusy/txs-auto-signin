@@ -5,10 +5,8 @@
 
 
 var page = require('webpage').create(),
-    server = 'https://service.txslicai.com/Service.svc/Anonymous/UserLogin',
-    data = '{"LoginName":"18511452686","Yzm":"634626"}';
-
-var sign_in_server =  'https://service.txslicai.com/Service.svc/GetSignInList?lastDate=&1447552824993';
+    sign_in_server =  'https://service.txslicai.com/StoreServices.svc/user/signlist',
+    data = '{"signtime": "2016-01-12"}';
 
 var headers = {
     "Content-Type": "application/json"
@@ -25,7 +23,8 @@ Array.prototype.forEach.call(JSON.parse(fs.read(CookieJar)), function(x){
     phantom.addCookie(x);
 });
 
-page.open(sign_in_server, function (status) {
+
+page.open(sign_in_server, 'post', data, headers, function (status) {
     if (status !== 'success') {
         console.log('Unable to post!');
     } else {

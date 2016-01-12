@@ -18,8 +18,8 @@ console.log('your number is ' + phone + ' and code is ' + code);
 
 
 var page = require('webpage').create(),
-    server = 'https://service.txslicai.com/Service.svc/Anonymous/UserLogin',
-    data = '{"LoginName":"'+ phone +'","Yzm":"' + code + '"}';
+    server = 'https://service.txslicai.com/StoreServices.svc/Anonymous/user/loginverification',
+    data = '{"mobile":"'+ phone +'","smscode":"' + code + '", "imgcode": "1df27aa8074d4c61af490e267693595f"}';
 
 var headers = {
     "Content-Type": "application/json"

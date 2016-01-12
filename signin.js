@@ -5,17 +5,26 @@
 
 
 var page = require('webpage').create();
-var sign_in_server =  'https://service.txslicai.com/Service.svc/OneWeekSignIn';
+var sign_in_server =  'https://service.txslicai.com/StoreServices.svc/user/signweek';
 var system = require('system');
-if (system.args.length === 1 || (system.args[1] != 'week' && system.args[1] != 'day')) {
+
+
+if (system.args.length > 1 && system.args[1] != 'week' && system.args[1] != 'day') {
     console.log('usage: ');
     console.log('./signin.js week');
     console.log('or')
     console.log('./signin.js day');
     phantom.exit();
 }
-if(system.args[1] == 'day'){
-    sign_in_server = 'https://service.txslicai.com/Service.svc/users/current?signin';
+if(system.args.length === 1){
+    console.log('warning: set default args to day');
+    sign_times = 'day';
+}else{
+    sign_times = system.args[1];
+}
+
+if(sign_times == 'day'){
+    sign_in_server = 'https://service.txslicai.com/StoreServices.svc/user/signday';
 }
 
 var headers = {

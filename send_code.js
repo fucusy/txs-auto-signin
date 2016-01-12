@@ -10,8 +10,8 @@ if (system.args.length === 1) {
 }
 phone = system.args[1];
 var page = require('webpage').create(),
-    server = 'https://service.txslicai.com/Service.svc/Anonymous/AnonymousSendMobileYzm',
-    data = '{"LoginName":"' + phone + '","IsRegister":true}';
+    server = 'https://service.txslicai.com/StoreServices.svc/Anonymous/user/sendusersms',
+    data = '{"mobile":"' + phone + '","imgcode":"4164", "imgkey": "f5af23445a524594b4b534cbf95d194a"}';
 
 var headers = {
     "Content-Type": "application/json"
