@@ -19,7 +19,8 @@ if you do not want install to this path, you need to update the first line to sp
 
 ###if you are not login:
 
-1. send code to your mobile, `./send_code.js {your_mobile_number}`
+1. open https://service.txslicai.com/html/anonymous/login.html, input your mobile phone and captcha code in your
+browser and post, you will receive mobile message to get the code for next step
 2. after receiving the code, `./signin.js {your_mobile_number} {code}`
 3. after login, `./signin.js week` to sign in one week  or `./signin.js day` to sign in today
 
